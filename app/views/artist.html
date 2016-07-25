@@ -1,0 +1,37 @@
+<md-content ng-cloak>
+  
+  <div layout="row" id="artist-view-container">
+    <div flex="75" id="current-artist-container">
+      <div layout-padding layout="column" id="artist-info">
+        <span id="artist-name">{{::artist.name}}</span id="artist-name">
+        <div layout="row">
+          <img id="artist-img" ng-src="{{artist.images[0].url}}" ng-click="goToSpotify()">
+          <div layout="column">
+           <div flex></div>
+           <div layout="row" id="trending-tracks-container" ng-repeat="track in topTracks | limitTo: 5 track by $index">
+              <div id="track-container" ng-click="togglePreview(track)">
+                <img id="trending-track-img" ng-src="{{track.album.images[0].url}}">
+                <span id="trending-track">{{::track.name}}</span>
+              </div>
+            </div>
+           <div flex></div>
+          </div>
+        </div>
+      </div>
+      <div layout="column" id="current-track-details">
+        <span id="current-track-name">{{currentTrackName}}</span>
+        <span id="current-album">{{currentAlbum}}</span>
+        <md-progress-linear md-mode="determinate" ng-value="songProgress"></md-progress-linear>
+      </div>
+    </div>
+    <div flex="25" id="related-artists-container">
+      <div layout="column" ng-repeat="artist in relatedArtists | limitTo: 5 track by $index">
+        <div layout-padding layout="row" id="related-artist-container" ui-sref="artist({idArtist:artist.id})">
+          <img id="related-img" ng-src="{{artist.images[0].url}}">
+          <h1 id="related-artist-name">{{::artist.name}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</md-content>

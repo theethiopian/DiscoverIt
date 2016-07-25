@@ -1,0 +1,45 @@
+<md-content ng-cloak>
+  <section>
+    <div id="discover-header">
+      <span>Discover. It.</span>
+    </div>
+    <div layout="row" ng-if="searchStr">
+      <div flex></div>
+      <p flex="40" id="results-for">Results for:</p>
+      <div flex></div>
+    </div>
+    <div layout="row" ng-class="searchStr ? 'results-margin' : ''">
+      <div flex></div>
+        <md-input-container flex="40" md-no-float>
+          <input type="text" placeholder="Search for an artist" ng-keyup="searchArtist()" ng-model="searchStr">
+        </md-input-container>
+      <div flex></div>
+    </div>
+  </section>
+  <section layout="row">
+    <div flex></div>
+    <div flex="40" id="query-results-container" ng-if="artistResults && searchStr">
+      <div layout="row" layout-padding id="query-results" ng-if="artist.images" ng-repeat="artist in artistResults | limitTo: 8 track by $index">
+        <div ui-sref="artist({idArtist: artist.id})">
+          <img id="img-query-results" ng-src="{{artist.images[0].url}}" />
+          <span id="name-query-results" layout-padding>{{artist.name}}</span>
+        </div>
+      </div>
+    </div>
+    <div flex></div>  
+  </section>
+</md-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

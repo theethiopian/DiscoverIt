@@ -1,0 +1,29 @@
+<md-content ng-cloak>
+  <section layout-padding>
+    <div layout="column">
+      <div layout-padding></div>
+      <md-button id="facebook-btn" class="md-raised login-button" ng-click="oauthLogin('facebook')">
+       LOGIN WITH FACEBOOK
+      </md-button>
+      <div layout-padding></div>
+      <md-button id="twitter-btn" class="md-raised login-button" ng-click="oauthLogin('twitter')">
+       LOGIN WITH TWITTER
+      </md-button>
+      <div layout-padding></div>
+      <md-button id="github-btn" class="md-raised login-button" ng-click="oauthLogin('github')">
+       LOGIN WITH GITHUB
+      </md-button>
+      <div layout-padding></div>
+      <md-button id="google-btn" class="md-raised login-button" ng-click="oauthLogin('google')">
+       LOGIN WITH GOOGLE
+      </md-button>
+      <div layout-padding></div>
+      <div id="btn-divider">-- or --</div>
+      <div layout-padding></div>
+      <md-button id="guest-btn" class="md-raised login-button" ng-click="anonymousLogin()">
+       CONTINUE AS GUEST
+      </md-button>
+    </div>
+  </section>
+</md-content>
+
