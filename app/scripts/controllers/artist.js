@@ -67,5 +67,4 @@ angular.module('discoverItApp')
         currentTrack.stop();
       }
     });
-
-  });
+});

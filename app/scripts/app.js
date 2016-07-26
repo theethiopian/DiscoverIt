@@ -45,7 +45,7 @@ angular.module('discoverItApp', [
         controller: 'HomeCtrl',
         resolve: {
           currentAuth: function(Auth) {
-            return Auth.$requireAuth();
+            return Auth.$waitForAuth();
           }
         }
       })
@@ -74,7 +74,7 @@ angular.module('discoverItApp', [
             return Spotify.getRelatedArtists($stateParams.idArtist);
           },
           currentAuth: function(Auth) {
-            return Auth.$requireAuth();
+            return Auth.$waitForAuth();
           }
         }
       });

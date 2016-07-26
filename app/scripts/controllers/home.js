@@ -8,7 +8,7 @@
  * Controller of the ngSpotifyApp
  */
 angular.module('discoverItApp')
-  .controller('HomeCtrl', function ($scope, Spotify) {
+ .controller('HomeCtrl', function ($scope, Spotify) {
     
     $scope.searchStr = '';
     $scope.artistResults = [];
@@ -25,3 +25,4 @@ angular.module('discoverItApp')
     }
 
   });
+
