@@ -49,6 +49,16 @@ angular.module('discoverItApp', [
           }
         }
       })
+       .state('chat', {
+        url: '/chat',
+        templateUrl: 'views/chat.html',
+        controller: 'ChatCtrl',
+        resolve: {
+          currentAuth: function(Auth) {
+            return Auth.$waitForAuth();
+          }
+        }
+      })
       .state('artist', {
         url: '/artist/:idArtist',
         templateUrl: 'views/artist.html',
