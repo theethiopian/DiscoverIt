@@ -1,13 +1,13 @@
 
 
 # Project Name #
-Ear Spice / DiscoverIt / Sound Adventure
+discover.it
 
 ## Summary ##
-  With DiscoverIt, you will be able to type in your favorite artist and have that give you your next favorite artist and song! You can chat with your friends if you're logged in and share your discoveries!
+  With discover.it, you will be able to type in your favorite artist and have that give you your next favorite artist and song! You can chat with your friends if you're logged in and share your discoveries!
 
 ## Problem and Solution ##
-  Most times with our music we listen to the same things over and over again. WIth DiscoverIt, that is easily solved becuase you take the music you are interested in and let that guide your next discovery. 
+  Most times with our music we listen to the same things over and over again. WIth discover.it, that is easily solved becuase you take the music you are interested in and let that guide your next discovery. 
 
 
 ## How to Get Started ##
